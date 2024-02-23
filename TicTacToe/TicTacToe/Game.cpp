@@ -60,7 +60,6 @@ void Game::processEvents()
 // Initialize game objects
 void Game::initialize()
 {
-
 }
 
 // Update objects in the game
@@ -88,6 +87,7 @@ void Game::handleInputs(sf::Keyboard::Key key, sf::Mouse::Button button, bool is
 	if (button == sf::Mouse::Left && isPressed)
 	{
 		std::cout << " Left Mouse Pressed = True\n";
+		player1.playersTurn(isPressed, isPressed = false);
 	}
 	else
 	{

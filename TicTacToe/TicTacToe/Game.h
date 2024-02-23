@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include "SFML/Graphics.hpp"
+#include "Player1.h"
 
 class Game
 {
@@ -27,5 +28,7 @@ private:
 
 	// This will be used to adjust the frame rate
 	static const sf::Time TimePerFrame;
+
+	Player1 player1;
 };
 
