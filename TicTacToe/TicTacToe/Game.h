@@ -12,6 +12,8 @@ public:
 private:
 	// Processing SFML game events
 	void processEvents();
+	// Initialize game objects
+	void initialize();
 	// Updates the game on screen with the use of delta time
 	void update(sf::Time deltaTime);
 	// Draw graphics to the screen
