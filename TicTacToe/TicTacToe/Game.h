@@ -1,5 +1,6 @@
 #pragma once
 
+#include <iostream>
 #include "SFML/Graphics.hpp"
 
 class Game
@@ -19,7 +20,7 @@ private:
 	// Draw graphics to the screen
 	void render();
 	// Handling any inputs needed for the game
-	void handleInputs(sf::Keyboard::Key key, bool isPressed);
+	void handleInputs(sf::Keyboard::Key key, sf::Mouse::Button button, bool isPressed);
 
 	// Render the game window
 	sf::RenderWindow mWindow;

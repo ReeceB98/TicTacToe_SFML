@@ -37,10 +37,16 @@ void Game::processEvents()
 		switch (event.type)
 		{
 		case sf::Event::KeyPressed:
-			handleInputs(event.key.code, true);
+			handleInputs(event.key.code, event.mouseButton.button, true);
 			break;
 		case sf::Event::KeyReleased:
-			handleInputs(event.key.code, false);
+			handleInputs(event.key.code, event.mouseButton.button, false);
+			break;
+		case sf::Event::MouseButtonPressed:
+			handleInputs(event.key.code, event.mouseButton.button, true);
+			break;
+		case sf::Event::MouseButtonReleased:
+			handleInputs(event.key.code, event.mouseButton.button, false);
 			break;
 		case sf::Event::Closed:
 			mWindow.close();
@@ -76,9 +82,17 @@ void Game::render()
 }
 
 // Specify what the inputs do for the game
-void Game::handleInputs(sf::Keyboard::Key key, bool isPressed)
+void Game::handleInputs(sf::Keyboard::Key key, sf::Mouse::Button button, bool isPressed)
 {
 	// key events for the game
+	if (button == sf::Mouse::Left && isPressed)
+	{
+		std::cout << " Left Mouse Pressed = True\n";
+	}
+	else
+	{
+		std::cout << "Left Mouse Pressed = False\n";
+	}
 }
 
 
