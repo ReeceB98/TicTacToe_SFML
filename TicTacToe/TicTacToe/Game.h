@@ -3,6 +3,7 @@
 #include <iostream>
 #include "SFML/Graphics.hpp"
 #include "Player1.h"
+#include "Player2.h"
 
 class Game
 {
@@ -30,5 +31,9 @@ private:
 	static const sf::Time TimePerFrame;
 
 	Player1 player1;
+	Player2 player2;
+
+	bool isPlayer1 = true;
+	bool isPlayer2 = false;
 };
 

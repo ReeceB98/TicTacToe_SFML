@@ -2,10 +2,10 @@
 
 #include "Player.h"
 
-class Player2 : Player
+class Player2 : public Player
 {
 public:
-	void playersTurn(bool& isPlayerOnesTurn, bool& isPlayerTwosTurn);
+	//void playersTurn(bool& isPlayerOnesTurn, bool& isPlayerTwosTurn);
 
 private:
 };

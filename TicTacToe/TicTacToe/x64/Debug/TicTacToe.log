@@ -1,7 +1,2 @@
 ﻿  Game.cpp
-  main.cpp
-  Player.cpp
-  Player1.cpp
-  Player2.cpp
-  Generating Code...
   TicTacToe.vcxproj -> C:\VisualStudio\TicTacToe_SFML\TicTacToe\x64\Debug\TicTacToe.exe

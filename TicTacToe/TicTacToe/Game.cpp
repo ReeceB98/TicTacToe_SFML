@@ -60,6 +60,7 @@ void Game::processEvents()
 // Initialize game objects
 void Game::initialize()
 {
+	
 }
 
 // Update objects in the game
@@ -76,6 +77,9 @@ void Game::render()
 
 	// Draw objects here
 	//mWindow.draw(shape);
+	
+	// CONTINUE THIS! 
+	//mWindow.draw(player1.render(mWindow));
 
 	mWindow.display();
 }
@@ -83,15 +87,33 @@ void Game::render()
 // Specify what the inputs do for the game
 void Game::handleInputs(sf::Keyboard::Key key, sf::Mouse::Button button, bool isPressed)
 {
+
 	// key events for the game
-	if (button == sf::Mouse::Left && isPressed)
+	if (button == sf::Mouse::Left && isPressed && isPlayer1)
 	{
 		std::cout << " Left Mouse Pressed = True\n";
-		player1.playersTurn(isPressed, isPressed = false);
+		player1.playersTurn(isPlayer1 = true, isPlayer2 = false);
+	}
+	else if (button == sf::Mouse::Left && isPressed && isPlayer2)
+	{
+		std::cout << " Left Mouse Pressed = True\n";
+		player2.playersTurn(isPlayer1 = false, isPlayer2 = true);
+	}
+	else if (button == sf::Mouse::Left && !isPressed && isPlayer1)
+	{
+		std::cout << "Left Mouse Pressed = False\n";
+		isPlayer1 = false;
+		isPlayer2 = true;
+	}
+	else if (button == sf::Mouse::Left && !isPressed && isPlayer2)
+	{
+		std::cout << "Left Mouse Pressed = False\n";
+		isPlayer1 = true;
+		isPlayer2 = false;
 	}
 	else
 	{
-		std::cout << "Left Mouse Pressed = False\n";
+		//std::cout << "Left Mouse Pressed = False\n";
 	}
 }
 
