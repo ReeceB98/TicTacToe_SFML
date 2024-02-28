@@ -80,6 +80,7 @@ void Game::render()
 	
 	// CONTINUE THIS! 
 	//mWindow.draw(player1.render(mWindow));
+	player1.render(mWindow);
 
 	mWindow.display();
 }

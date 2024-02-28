@@ -10,7 +10,7 @@ public:
 	~Player();
 	void playersTurn(bool& isPlayerOnesTurn, bool& isPlayerTwosTurn);
 	void setSprite();
-	void render(sf::RenderWindow window);
+	void render(sf::RenderWindow &window);
 
 
 private:

@@ -2,12 +2,12 @@
 
 Player::Player() : texture(new sf::Texture()), sprite(new sf::Sprite()) 
 {
-	if (!texture->loadFromFile("C:/VisualStudio/TicTacToe_SFML/TicTacToe/Images/YellowSquare.png"))
+	/*if (!texture->loadFromFile("C:/VisualStudio/TicTacToe_SFML/TicTacToe/Images/YellowSquare.png"))
 	{
 		std::cout << "Texture did not load!\n";
 	}
 
-	sprite->setTexture(*texture);
+	sprite->setTexture(*texture);*/
 }
 
 Player::~Player()
@@ -24,6 +24,7 @@ void Player::playersTurn(bool& isPlayerOnesTurn, bool& isPlayerTwosTurn)
 	if (isPlayerOne && !isPlayerTwo)
 	{
 		std::cout << "Turn: Player 1\n";
+		setSprite();
 	}
 	else
 	{
@@ -41,7 +42,7 @@ void Player::setSprite()
 	sprite->setTexture(*texture);
 }
 
-void Player::render(sf::RenderWindow window)
+void Player::render(sf::RenderWindow &window)
 {
 	window.draw(*sprite);
 }
